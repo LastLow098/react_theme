@@ -1,0 +1,40 @@
+$main_color: rgb(103,172,91);
+$second_color: rgb(215,216,220);
+    
+*
+    font-family: Tahoma, sans-serif
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background: #fff
+
+.title
+    font-size: 2.5em
+    margin: 30px 30px 50px 30px
+
+.sub_main
+    margin: 0px 30px 30px 30px
+
+.sub_title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &_title
+        font-size: 1.5em
+    &_change
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &_items
+            padding: 10px
+            border: 3px solid $main_color
+        &_items:first-child
+            position: relative
+            left: 3px
+            border-radius: 10px 0px 0px 10px
+        &_items:last-child
+            border-radius: 0px 10px 10px 0px
+            border: 3px solid $second_color
+            
