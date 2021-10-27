@@ -1,31 +1,6 @@
-import React, {Component} from 'react'
+// import React, {Component} from 'react'
 
-class Range extends Component {
-    state = {
-        range1: "13.8",
-        range2: "66.6"
-    }
-
-    toCurrency = price => {
-        return new Intl.NumberFormat('ru-RU', {
-            currency: 'rub',
-            style: 'currency',
-            minimumFractionDigits: 0
-        }).format(price)
-    }
-
-    changeRange = (id) => {
-        let rangeChan = document.querySelector('#'+ id)
-        var rangeValueNew
-        if (id === 'range1') {
-            rangeValueNew = ((rangeChan.value - 15000) * 100) / 1000000
-        }else {
-            rangeValueNew = ((rangeChan.value - 2) * 100) / 10
-        }
-        rangeChan.style.background = "-webkit-linear-gradient(left, #67ac5b 0%, #67ac5b "+ rangeValueNew +"%, rgb(215,216,220) "+ rangeValueNew +"%, rgb(215,216,220) 100%)"
-    }
-
-    render() {
+function Range (props) {
         const styleRange = {
             background: '-webkit-linear-gradient(left, #67ac5b 0%, #67ac5b 60%, #d7d8dc 60%, #d7d8dc 100%)'
         }
@@ -34,12 +9,12 @@ class Range extends Component {
                 <div className="range">
                     <div className="range_text">
                         <div className="range_text_items">Сумма займа</div>
-                        <div className="range_text_items">{this.toCurrency(138100)}</div>
+                        <div className="range_text_items">{props.toCurrency(138100)}</div>
                     </div>
-                    <input type="range" className="range_sub" id="range1" min="15000" max="1000000" defaultValue="138000" onChange={this.changeRange.bind(this, 'range1')} />
+                    <input type="range" className="range_sub" id="range1" min="15000" max="1000000" defaultValue="138000" onChange={props.changeRange.bind(this, 'range1')} />
                     <div className="range_sub_items">
-                        <div className="range_sub_item">от {this.toCurrency(15000)}</div>
-                        <div className="range_sub_item">до {this.toCurrency(1000000)}</div>
+                        <div className="range_sub_item">от {props.toCurrency(15000)}</div>
+                        <div className="range_sub_item">до {props.toCurrency(1000000)}</div>
                     </div>
                 </div>
                 <div className="range">
@@ -47,7 +22,7 @@ class Range extends Component {
                         <div className="range_text_items">Срок займа</div>
                         <div className="range_text_items">8 месяцев</div>
                     </div>
-                    <input type="range" style={styleRange} className="range_sub" id="range2" min="2" max="12" defaultValue="8" onChange={this.changeRange.bind(this, 'range2')} />
+                    <input type="range" style={styleRange} className="range_sub" id="range2" min="2" max="12" defaultValue="8" onChange={props.changeRange.bind(this, 'range2')} />
                     <div className="range_sub_items">
                         <div className="range_sub_item">от 2 месяцев</div>
                         <div className="range_sub_item">до 12 месяцев</div>
@@ -55,7 +30,6 @@ class Range extends Component {
                 </div>
             </div>
         )
-    }
 }
 
 export default Range

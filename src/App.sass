@@ -12,10 +12,19 @@ body
 
 .title
     font-size: 2.5em
-    margin: 30px 30px 50px 30px
+    font-weight: 700
+    margin: 70px 70px 50px 100px
 
 .sub_main
-    margin: 0px 30px 30px 30px
+    margin: 0px 100px
+    display: flex
+    justify-content: space-around
+    &_items:first-child
+        width: 60%
+        margin-right: 50px
+    &_items:last-child
+        width: 35%
+        margin-left: 50px
 
 .sub_title
     display: flex
@@ -29,17 +38,18 @@ body
         align-items: center
         justify-content: space-between
         &_items
-            padding: 10px
+            padding: 10px 20px
             border: 3px solid $main_color
         &_items:first-child
             position: relative
             left: 3px
-            border-radius: 10px 0px 0px 10px
+            border-radius: 5px 0px 0px 5px
         &_items:last-child
-            border-radius: 0px 10px 10px 0px
+            border-radius: 0px 5px 5px 0px
             border: 3px solid $second_color
             
 .range
+    margin: 40px 0
     &_text
         display: flex
         align-items: center
@@ -50,7 +60,6 @@ body
     &_sub
         width: 100%
         -webkit-appearance: none
-        // border: 1px solid $main_color
         border-radius: 2px
         height: 4px
         outline: none
@@ -69,8 +78,32 @@ body
             margin-top: 5px
         &_item
             color: #adaeb2
+            font-size: 0.9em
 
+.main_side
+    width: 100%
+    &_item
+        &_title
+            color: #adaeb2
+            font-size: 0.9em
+            margin-bottom: 10px
+        &_info
+            font-size: 3.5em
+            font-weight: 600
+            margin-bottom: 30px
+    &_submit
+        width: 100%
+        background: $main_color
+        color: #fff
+        height: 55px
+        border: 1px solid $main_color
+        border-radius: 5px
+        font-size: 1.3em
     
+.main_info
+    color: #adaeb2
+    font-size: 0.8em
+    margin-top: 30px
 
 
 

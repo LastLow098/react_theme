@@ -12,11 +12,27 @@ body {
 
 .title {
   font-size: 2.5em;
-  margin: 30px 30px 50px 30px;
+  font-weight: 700;
+  margin: 70px 70px 50px 100px;
 }
 
 .sub_main {
-  margin: 0px 30px 30px 30px;
+  margin: 0px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sub_main_items:first-child {
+  width: 60%;
+  margin-right: 50px;
+}
+
+.sub_main_items:last-child {
+  width: 35%;
+  margin-left: 50px;
 }
 
 .sub_title {
@@ -49,19 +65,23 @@ body {
 }
 
 .sub_title_change_items {
-  padding: 10px;
+  padding: 10px 20px;
   border: 3px solid #67ac5b;
 }
 
 .sub_title_change_items:first-child {
   position: relative;
   left: 3px;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .sub_title_change_items:last-child {
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 5px 5px 0px;
   border: 3px solid #d7d8dc;
+}
+
+.range {
+  margin: 40px 0;
 }
 
 .range_text {
@@ -114,5 +134,38 @@ body {
 
 .range_sub_item {
   color: #adaeb2;
+  font-size: 0.9em;
+}
+
+.main_side {
+  width: 100%;
+}
+
+.main_side_item_title {
+  color: #adaeb2;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.main_side_item_info {
+  font-size: 3.5em;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.main_side_submit {
+  width: 100%;
+  background: #67ac5b;
+  color: #fff;
+  height: 55px;
+  border: 1px solid #67ac5b;
+  border-radius: 5px;
+  font-size: 1.3em;
+}
+
+.main_info {
+  color: #adaeb2;
+  font-size: 0.8em;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=App.css.map */
