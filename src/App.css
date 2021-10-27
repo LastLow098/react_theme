@@ -29,10 +29,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .sub_title_title {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .sub_title_change {
@@ -61,5 +62,57 @@ body {
 .sub_title_change_items:last-child {
   border-radius: 0px 10px 10px 0px;
   border: 3px solid #d7d8dc;
+}
+
+.range_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.range_text_items {
+  font-size: 1.3em;
+}
+
+.range_sub {
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  height: 4px;
+  outline: none;
+  background: -webkit-linear-gradient(left, #67ac5b 0%, #67ac5b 13.8%, #d7d8dc 13.8%, #d7d8dc 100%);
+}
+
+.range_sub::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #67ac5b;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range_sub_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+}
+
+.range_sub_item {
+  color: #adaeb2;
 }
 /*# sourceMappingURL=App.css.map */
