@@ -5,7 +5,7 @@ import SubTitle from './subTitle';
 import Range from './Range';
 import Side from './Side';
 
-class App extends Component {
+class App extends Component { 
 
   toCurrency = price => {
     return new Intl.NumberFormat('ru-RU', {
@@ -14,7 +14,7 @@ class App extends Component {
         minimumFractionDigits: 0
     }).format(price)
 }
-
+// 1 === "1" - false
 changeRange = (id) => {
   let rangeChan = document.querySelector('#'+ id)
   var rangeValueNew
