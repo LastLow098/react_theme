@@ -13,7 +13,7 @@ body
 
 .alert
     display: none
-    position: absolute
+    position: fixed
     font-size: 1.5em
     padding: 30px 100px
     background: #fff
@@ -149,6 +149,8 @@ body
             font-size: 0.9em
 
 @media ( max-width: 1150px ) 
+    .alert
+        padding: 30px 80px
     .sub_title
         flex-direction: column
         justify-content: start
@@ -163,6 +165,8 @@ body
     
 
 @media ( max-width: 994px ) 
+    .alert
+        font-size: 1.1em
     .sub_main
         flex-direction: column
         &_items:first-child
@@ -181,6 +185,9 @@ body
             margin-bottom: 0
 
 @media ( max-width: 900px )
+    .alert
+        padding: 30px 50px
+        font-size: 0.9em
     .title
         font-size: 2em 
 
@@ -200,7 +207,13 @@ body
     .title
         font-size: 1.5em 
 
+
+
+
 @media ( max-width: 640px )
+    .alert
+        padding: 30px 30px
+        font-size: 0.8em
     .title
         font-size: 1.2em 
         margin-bottom: 30px
@@ -223,13 +236,19 @@ body
         margin: 40px 50px
 
 @media ( max-width: 520px )
+    .alert
+        padding: 20px 20px
+        font-size: 0.8em
     .main
         padding: 40px 40px
         margin: 30px 30px
         &_info
             font-size: 0.7em
 
-@media ( max-width: 440px )
+@media ( max-width: 460px )
+    .alert
+        padding: 20px 20px
+        font-size: 0.7em
     .main
         padding: 30px 30px
     .sub_title

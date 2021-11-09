@@ -95,7 +95,7 @@ class App extends Component {
       return (
         <div className="main" style={{zoom: width}}>
           <div className="alert">
-            Заявка оформлена
+          Заявка успешно отправлена
           </div>
           <Title /> 
           <div className="sub_main">
