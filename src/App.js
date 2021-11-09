@@ -28,6 +28,9 @@ function main_currency() {
 }
 
 class App extends Component { 
+  cliked_btn = () => {
+      $('.alert').fadeIn(200).delay(1000).fadeOut(200)
+  }
 
   toCurrency = price => {
     return new Intl.NumberFormat('ru-RU', {
@@ -91,6 +94,9 @@ class App extends Component {
       }
       return (
         <div className="main" style={{zoom: width}}>
+          <div className="alert">
+            Заявка оформлена
+          </div>
           <Title /> 
           <div className="sub_main">
             <div className="sub_main_items">
@@ -101,11 +107,12 @@ class App extends Component {
               toCurrency={this.toCurrency}
               changeRange={this.changeRange}
               />
-              <div className="main_info">Условия выдачи займа могут отличаться, исходя из анализа документов и состояния вашего автомобиля</div>
+              <div className="main_info main_info_mar">Условия выдачи займа могут отличаться, исходя из анализа документов и состояния вашего автомобиля</div>
             </div>
             <div className="sub_main_items">
               <Side 
               toCurrency={this.toCurrency}
+              cliked_btn={this.cliked_btn}
               />
             </div>
           </div>

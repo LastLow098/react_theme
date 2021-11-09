@@ -11,7 +11,7 @@ function Side(props) {
                     <div className="main_side_item_info" id="currency">{props.toCurrency(3729)}</div>
                 </div>
             </div>
-            <button className="main_side_submit">Подать заявку</button>
+            <button className="main_side_submit" onClick={props.cliked_btn}>Подать заявку</button>
             <div className="main_side_info main_info">Расчет займа предварительный</div>
         </div>
     )
