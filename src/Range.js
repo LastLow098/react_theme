@@ -9,7 +9,7 @@ function Range (props) {
                 <div className="range">
                     <div className="range_text">
                         <div className="range_text_items">Сумма займа</div>
-                        <div className="range_text_items">{props.toCurrency(138100)}</div>
+                        <div className="range_text_items" id="range_change_1">{props.toCurrency(138100)}</div>
                     </div>
                     <input type="range" className="range_sub" id="range1" min="15000" max="1000000" defaultValue="138000" onChange={props.changeRange.bind(this, 'range1')} />
                     <div className="range_sub_items">
@@ -20,7 +20,7 @@ function Range (props) {
                 <div className="range">
                     <div className="range_text">
                         <div className="range_text_items">Срок займа</div>
-                        <div className="range_text_items">8 месяцев</div>
+                        <div className="range_text_items" id="range_change_2">8 месяцев</div>
                     </div>
                     <input type="range" style={styleRange} className="range_sub" id="range2" min="2" max="12" defaultValue="8" onChange={props.changeRange.bind(this, 'range2')} />
                     <div className="range_sub_items">

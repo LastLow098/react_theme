@@ -8,7 +8,7 @@ function Side(props) {
                 </div>
                 <div className="main_side_item">
                     <div className="main_side_item_title">Ежемесячный платеж</div>
-                    <div className="main_side_item_info">{props.toCurrency(3729)}</div>
+                    <div className="main_side_item_info" id="currency">{props.toCurrency(3729)}</div>
                 </div>
             </div>
             <button className="main_side_submit">Подать заявку</button>
