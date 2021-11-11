@@ -1,0 +1,89 @@
+$main_color: rgb(103,172,91);
+$second_color: rgb(215,216,220);
+    
+.sub_title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 50px
+    &_title
+        font-size: 1.3em
+    &_change
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        &_items
+            font-size: 1.1em
+            padding: 11px 20px
+        &_items
+            position: relative
+            border-radius: 5px 0px 0px 5px
+            border: 3px solid $second_color
+            &:first-child
+                left: 3px
+            &:last-child
+                border-radius: 0px 5px  5px 0px
+    &_alteration
+        border: 3px solid $main_color
+        z-index: 1
+
+@media ( max-width: 1250px ) 
+    .sub_title
+        &_title
+            font-size: 1.1em
+        &_change_items
+            font-size: 0.9em
+
+@media ( max-width: 1150px ) 
+    .sub_title
+        flex-direction: column
+        justify-content: start
+        align-items: start
+        &_title
+            margin-bottom: 10px
+
+@media ( max-width: 994px ) 
+    .sub_title
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        &_title
+            margin-bottom: 0
+
+
+@media ( max-width: 840px )
+    .sub_title
+        flex-direction: column
+        justify-content: start
+        align-items: start
+        &_title
+            margin-bottom: 10px
+
+@media ( max-width: 640px )
+    .sub_title
+        margin-bottom: 30px
+        &_title
+            font-size: 0.9em
+        &_change_items
+            font-size: 0.8em
+
+@media ( max-width: 460px )
+    .sub_title
+        &_change
+            display: block
+            width: 100%
+            &_items
+                text-align: center
+            &_items:first-child
+                left: 0
+                top: 3px
+                border-radius: 5px 5px 0px 0px
+            &_items:last-child
+                border-radius: 0px 0px 5px 5px
+
+
+
+
+
+
