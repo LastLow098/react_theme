@@ -16,66 +16,48 @@ class App extends Component {
 	}
 
 	changeRange = event => {
-		if (event.target.id === 'range1') {
-			const range = this.state.range1
-			range.styleBG = ((event.target.value - 15000) * 100) / 995000
-			range.cost = event.target.value
-			this.setState({
-				range1: range
-			})
-		}else {
-			const range = this.state.range2
-			range.styleBG = ((event.target.value - 2) * 100) / 10
-			range.cost = event.target.value
-			this.setState({
-				range2: range
-			})
-		}
-
-
+		var index
+		event.target.id === 'range1' ? index = 0 : index = 1
+		const range = this.state.range
+		range[index].styleBG = index ? ((event.target.value - 2) * 100) / 10 : ((event.target.value - 15000) * 100) / 985000
+		range[index].cost = event.target.value
+		this.setState({ range })
 	}
 
 	toClicker = classNames => {
-		if (classNames === 'subTitle1') {
-			this.setState({
-				subTitle: 1
-			})
-			}else {
-			this.setState({
-				subTitle: 0
-			})
-		}
+		var subTitle
+		classNames === 'subTitle1' ? subTitle = 1 : subTitle = 0
+		this.setState({ subTitle })
 	}
 
 	mainCost = () => {
 		var cost
 		if (this.state.subTitle) {
-			cost = Number(0.027 * this.state.range1.cost)
+			cost = Number(0.027 * this.state.range[0].cost)
 		}else {
-			cost = Number(this.state.range1.cost * 0.027 * Math.pow(1 + 0.027, this.state.range2.cost) / (Math.pow(1 + 0.027, this.state.range2.cost) - 1))
+			cost = Number(this.state.range[0].cost * 0.027 * Math.pow(1 + 0.027, this.state.range[1].cost) / (Math.pow(1 + 0.027, this.state.range[1].cost) - 1))
 		}
 		return cost.toFixed()
 	}
-
-
+	
 	state = { 
 		width: window.innerWidth, 
 		subTitle: 1,
-		range1: {
-			styleBG: 13.5,
-			cost: 138000
-		},
-		range2: {
-			styleBG: 60,
-			cost: 8
-		}
+		range: [
+			{
+				styleBG: 13.5,
+				cost: 138000
+			},
+			{
+				styleBG: 60,
+				cost: 8
+			}
+		]
 	};
 
 	render() {
-		var width = this.state.width / 1520
-		if (width < 1) {
-			width = 1
-		}
+		var width
+		(this.state.width / 1520) > 1 ? width = this.state.width / 1520 : width = 1
 		return (
 			<div className="main" style={{zoom: width}}>
 				<Title /> 
@@ -88,8 +70,7 @@ class App extends Component {
 						<Range 
 							toCurrency={this.toCurrency}
 							changeRange={this.changeRange}
-							range1={this.state.range1}
-							range2={this.state.range2}
+							range = {this.state.range}
 						/>
 						<div className="main_info main_info_mar">Условия выдачи займа могут отличаться, исходя из анализа документов и состояния вашего автомобиля</div>
 					</div>

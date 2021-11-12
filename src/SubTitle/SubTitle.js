@@ -1,28 +1,17 @@
-import {React, Component} from 'react'
 import './SubTitle.sass'
 
-
-
-class SubTitle extends Component {
-    render() {
-        var classNames1 = '',
-            classNames2 = ''
-            
-        if (this.props.boolSub) {
-            classNames1 = 'alteration'
-        }else{
-            classNames2 = 'alteration'
-        }
-        return (
-            <div className="sub_title">
-                <div className="sub_title_title">Тип платежа</div>
-                <div className="sub_title_change">
-                    <div className={'sub_title_change_items ' + classNames1} onClick={this.props.toClicker.bind(this, 'subTitle1')} id="change_1">Дифференцированный</div>
-                    <div className={'sub_title_change_items ' + classNames2} onClick={this.props.toClicker.bind(this, 'subTitle2')} id="change_2">Аннуитевный</div>
-                </div>
+function SubTitle (props) {
+    var classNames = ["sub_title_change_items ", "sub_title_change_items "]
+    classNames[!props.boolSub ? 1 : 0] += "alteration"
+    return (
+        <div className="sub_title">
+            <div className="sub_title_title">Тип платежа</div>
+            <div className="sub_title_change">
+                <div className={classNames[0]} onClick={props.toClicker.bind(this, 'subTitle1')}>Дифференцированный</div>
+                <div className={classNames[1]} onClick={props.toClicker.bind(this, 'subTitle2')}>Аннуитевный</div>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default SubTitle
