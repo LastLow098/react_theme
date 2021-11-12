@@ -1,0 +1,54 @@
+$main_color: rgb(103,172,91);
+$second_color: rgb(215,216,220);
+
+.range
+    margin: 40px 0
+    &_text
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 5px 20px
+        &_items
+            font-size: 1.3em
+    &_sub
+        width: 100%
+        -webkit-appearance: none
+        border-radius: 2px
+        height: 4px
+        outline: none
+        background: -webkit-linear-gradient(left, $main_color 0%, $main_color 13.8%, $second_color 13.8%, $second_color 100%)
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            background: $main_color
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            cursor: pointer
+        &_items
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-top: 5px
+        &_item
+            color: #adaeb2
+            font-size: 0.9em
+
+@media ( max-width: 1050px ) 
+    .range
+        &_text_items
+            font-size: 1em
+
+@media ( max-width: 640px )
+    .range
+        &_text_items
+            font-size: 0.9em
+        &_sub_item
+            font-size: 0.8em
+    .main_side_item_info
+        font-size: 2.8em
+
+@media ( max-width: 400px )
+    .range_text
+        padding: 5px 5px
+        &_items
+            font-size: 0.75em

@@ -1,1 +1,84 @@
-/* No CSS *//*# sourceMappingURL=Range.css.map */
+.range {
+  margin: 40px 0;
+}
+
+.range_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.range_text_items {
+  font-size: 1.3em;
+}
+
+.range_sub {
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  height: 4px;
+  outline: none;
+  background: -webkit-linear-gradient(left, #67ac5b 0%, #67ac5b 13.8%, #d7d8dc 13.8%, #d7d8dc 100%);
+}
+
+.range_sub::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #67ac5b;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range_sub_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+}
+
+.range_sub_item {
+  color: #adaeb2;
+  font-size: 0.9em;
+}
+
+@media (max-width: 1050px) {
+  .range_text_items {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 640px) {
+  .range_text_items {
+    font-size: 0.9em;
+  }
+  .range_sub_item {
+    font-size: 0.8em;
+  }
+  .main_side_item_info {
+    font-size: 2.8em;
+  }
+}
+
+@media (max-width: 400px) {
+  .range_text {
+    padding: 5px 5px;
+  }
+  .range_text_items {
+    font-size: 0.75em;
+  }
+}
+/*# sourceMappingURL=Range.css.map */

@@ -12,21 +12,6 @@ body {
   background: #fff;
 }
 
-.alert {
-  display: none;
-  position: fixed;
-  font-size: 1.5em;
-  padding: 30px 100px;
-  background: #fff;
-  border: 5px solid #67ac5b;
-  border-radius: 10px;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .main {
   zoom: 1.25;
   margin: 70px 90px;
@@ -34,12 +19,6 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 46px 5px rgba(146, 146, 146, 0.2);
           box-shadow: 0px 0px 46px 5px rgba(146, 146, 146, 0.2);
-}
-
-.title {
-  font-size: 2.5em;
-  font-weight: 700;
-  margin-bottom: 50px;
 }
 
 .sub_main {
@@ -61,102 +40,6 @@ body {
   margin-left: 50px;
 }
 
-.range {
-  margin: 40px 0;
-}
-
-.range_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5px 20px;
-}
-
-.range_text_items {
-  font-size: 1.3em;
-}
-
-.range_sub {
-  width: 100%;
-  -webkit-appearance: none;
-  border-radius: 2px;
-  height: 4px;
-  outline: none;
-  background: -webkit-linear-gradient(left, #67ac5b 0%, #67ac5b 13.8%, #d7d8dc 13.8%, #d7d8dc 100%);
-}
-
-.range_sub::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background: #67ac5b;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.range_sub_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 5px;
-}
-
-.range_sub_item {
-  color: #adaeb2;
-  font-size: 0.9em;
-}
-
-.main_side {
-  width: 100%;
-}
-
-.main_side_item_title {
-  color: #adaeb2;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-}
-
-.main_side_item_info {
-  font-size: 3.5em;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-.main_side_submit {
-  width: 100%;
-  background: #67ac5b;
-  color: #fff;
-  height: 55px;
-  border: 1px solid #67ac5b;
-  border-radius: 5px;
-  font-size: 1.3em;
-  cursor: pointer;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-
-.main_side_submit:hover {
-  background: #1bdd02;
-  border: 1px solid #1bdd02;
-}
-
-.main_side_submit:active {
-  background: #13a500;
-  border: 1px solid #13a500;
-}
-
 .main_info {
   color: #adaeb2;
   font-size: 0.8em;
@@ -167,22 +50,7 @@ body {
   margin-top: 42px;
 }
 
-@media (max-width: 1150px) {
-  .alert {
-    padding: 30px 80px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .range_text_items {
-    font-size: 1em;
-  }
-}
-
 @media (max-width: 994px) {
-  .alert {
-    font-size: 1.1em;
-  }
   .sub_main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -200,45 +68,9 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-  .alert {
-    padding: 30px 50px;
-    font-size: 0.9em;
-  }
-  .title {
-    font-size: 2em;
-  }
-}
-
 @media (max-width: 787px) {
   .main {
     padding: 50px 60px;
-  }
-}
-
-@media (max-width: 787px) {
-  .title {
-    font-size: 1.5em;
-  }
-}
-
-@media (max-width: 640px) {
-  .alert {
-    padding: 30px 30px;
-    font-size: 0.8em;
-  }
-  .title {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-  .range_text_items {
-    font-size: 0.9em;
-  }
-  .range_sub_item {
-    font-size: 0.8em;
-  }
-  .main_side_item_info {
-    font-size: 2.8em;
   }
 }
 
@@ -249,10 +81,6 @@ body {
 }
 
 @media (max-width: 520px) {
-  .alert {
-    padding: 20px 20px;
-    font-size: 0.8em;
-  }
   .main {
     padding: 40px 40px;
     margin: 30px 30px;
@@ -263,24 +91,8 @@ body {
 }
 
 @media (max-width: 460px) {
-  .alert {
-    padding: 20px 20px;
-    font-size: 0.7em;
-  }
   .main {
     padding: 30px 30px;
-  }
-}
-
-@media (max-width: 400px) {
-  .title {
-    font-size: 1em;
-  }
-  .range_text {
-    padding: 5px 5px;
-  }
-  .range_text_items {
-    font-size: 0.75em;
   }
 }
 /*# sourceMappingURL=App.css.map */
