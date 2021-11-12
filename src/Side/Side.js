@@ -1,4 +1,4 @@
-import './Side.css'
+import './Side.sass'
 
 function Side(props) {
     return (

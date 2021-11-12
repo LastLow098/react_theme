@@ -1,5 +1,5 @@
 import {React, Component} from 'react'
-import './SubTitle.css'
+import './SubTitle.sass'
 
 
 

@@ -1,4 +1,4 @@
-import './Range.css'
+import './Range.sass'
 
 function Range (props) {
     var styleRange1 = {

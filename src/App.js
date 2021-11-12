@@ -1,4 +1,4 @@
-import './App.css';
+import './App.sass';
 import React, {Component} from 'react'
 import Title from './Title/Title'
 import SubTitle from './SubTitle/SubTitle';

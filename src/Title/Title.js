@@ -1,4 +1,4 @@
-import './Title.css'
+import './Title.sass'
 
 function Title () {
     return (
