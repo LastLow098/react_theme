@@ -39,9 +39,20 @@ class App extends Component {
 		}
 		return cost.toFixed()
 	}
+
+	opacityBtnFunc = () => {
+		this.setState({ opacityBtn: 1 })
+		var nIntervId = setInterval(() => {
+			this.setState({ opacityBtn: 0 })
+			clearInterval(nIntervId)
+			nIntervId = null
+		}, 1000)
+		
+	}
 	
 	state = { 
 		width: window.innerWidth, 
+		opacityBtn: 0,
 		subTitle: 1,
 		range: [
 			{
@@ -78,6 +89,8 @@ class App extends Component {
 						<Side 
 							toCurrency={this.toCurrency}
 							mainCost={this.mainCost}
+							cliked_btn={this.opacityBtnFunc}
+							opacityBtn={this.state.opacityBtn}
 						/>
 					</div>
 				</div>

@@ -15,6 +15,12 @@ function Side(props) {
             </div>
             <button className="main_side_submit" onClick={props.cliked_btn}>Подать заявку</button>
             <div className="main_side_info main_info">Расчет займа предварительный</div>
+            <div className="alert" style={{
+                opacity: props.opacityBtn
+            }}>
+                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                Заявка успешно отправлена
+            </div>
         </div>
     )
 }
