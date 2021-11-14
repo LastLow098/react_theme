@@ -1,6 +1,8 @@
 import './Side.sass'
 
 function Side(props) {
+    var visit
+    props.opacityBtn ? visit = 'visible' : visit = 'hidden' 
     return (
         <div className="main_side">
             <div className="main_side_items">
@@ -16,9 +18,10 @@ function Side(props) {
             <button className="main_side_submit" onClick={props.cliked_btn}>Подать заявку</button>
             <div className="main_side_info main_info">Расчет займа предварительный</div>
             <div className="alert" style={{
-                opacity: props.opacityBtn
+                opacity: props.opacityBtn,
+                visibility: visit
             }}>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                <i className="fa fa-check-square-o" aria-hidden="true"></i>
                 Заявка успешно отправлена
             </div>
         </div>

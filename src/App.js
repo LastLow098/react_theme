@@ -47,7 +47,6 @@ class App extends Component {
 			clearInterval(nIntervId)
 			nIntervId = null
 		}, 1000)
-		
 	}
 	
 	state = { 
